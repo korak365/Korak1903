@@ -1,0 +1,88 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "models": {
+            "title": "Trending Models",
+            "transformation": {
+                "fields": ["name", "author", "description", "downloads", "likes", "trendingScore", "task", "license"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "name": {
+                        "label": "Model Name",
+                        "format": "text"
+                    },
+                    "author": {
+                        "label": "Author/Organization",
+                        "format": "text"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "format": "text"
+                    },
+                    "downloads": {
+                        "label": "Downloads",
+                        "format": "number"
+                    },
+                    "likes": {
+                        "label": "Likes",
+                        "format": "number"
+                    },
+                    "trendingScore": {
+                        "label": "Trending Score",
+                        "format": "number"
+                    },
+                    "task": {
+                        "label": "Task Type",
+                        "format": "text"
+                    },
+                    "license": {
+                        "label": "License",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "datasets": {
+            "title": "Trending Datasets",
+            "transformation": {
+                "fields": ["name", "author", "description", "downloads", "likes", "trendingScore", "size"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "name": {
+                        "label": "Dataset Name",
+                        "format": "text"
+                    },
+                    "author": {
+                        "label": "Author/Organization",
+                        "format": "text"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "format": "text"
+                    },
+                    "downloads": {
+                        "label": "Downloads",
+                        "format": "number"
+                    },
+                    "likes": {
+                        "label": "Likes",
+                        "format": "number"
+                    },
+                    "trendingScore": {
+                        "label": "Trending Score",
+                        "format": "number"
+                    },
+                    "size": {
+                        "label": "Dataset Size",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

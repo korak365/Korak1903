@@ -1,0 +1,58 @@
+{
+    "title": "Input schema of the Hugging Face Trending Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Hugging Face trending pages to scrape.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://huggingface.co/models?sort=trending"
+                },
+                {
+                    "url": "https://huggingface.co/datasets?sort=trending"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of pages to scrape.",
+            "default": 20
+        },
+        "scrapeTrendingModels": {
+            "title": "Scrape Trending Models",
+            "type": "boolean",
+            "description": "Whether to scrape trending models.",
+            "default": true
+        },
+        "scrapeTrendingDatasets": {
+            "title": "Scrape Trending Datasets",
+            "type": "boolean",
+            "description": "Whether to scrape trending datasets.",
+            "default": true
+        },
+        "trendingPeriod": {
+            "title": "Trending Period",
+            "type": "string",
+            "description": "Time period for trending data (daily, weekly, monthly).",
+            "enum": ["daily", "weekly", "monthly"],
+            "default": "daily"
+        },
+        "includeDetails": {
+            "title": "Include Detailed Information",
+            "type": "boolean",
+            "description": "Scrape detailed info for each model/dataset (slower but more data).",
+            "default": true
+        },
+        "extractMetrics": {
+            "title": "Extract Performance Metrics",
+            "type": "boolean",
+            "description": "Extract likes, downloads, and other metrics.",
+            "default": true
+        }
+    }
+}

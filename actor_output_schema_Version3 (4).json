@@ -1,0 +1,26 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Hugging Face Trending Scraper",
+    "properties": {
+        "trendingModelsOverview": {
+            "type": "string",
+            "title": "Trending Models",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=models"
+        },
+        "trendingDatasetsOverview": {
+            "type": "string",
+            "title": "Trending Datasets",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=datasets"
+        },
+        "marketIntelligence": {
+            "type": "string",
+            "title": "Market Intelligence Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=MARKET_REPORT"
+        },
+        "historicalTrends": {
+            "type": "string",
+            "title": "Historical Trends",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=HISTORICAL_TRENDS"
+        }
+    }
+}
